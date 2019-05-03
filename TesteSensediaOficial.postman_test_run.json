@@ -1,0 +1,601 @@
+{
+	"id": "f4f84b78-5f56-4a24-8894-641da5b9e6df",
+	"name": "TesteSensediaOficial",
+	"allTests": [],
+	"timestamp": "2019-05-03T03:25:20.249Z",
+	"collection_id": "e61d8e3e-5056-4a46-8d54-1e1d51d4636b",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "4a1ed110-ded3-4ad6-9a98-5063276d4ab7",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "e61d8e3e-5056-4a46-8d54-1e1d51d4636b",
+		"name": "TesteSensediaOficial",
+		"description": "",
+		"auth": null,
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "0051f7ad-92c2-434e-a4d9-f18a072db826",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "aa10545e-ad47-4dc0-9b79-02130850a930",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": [],
+		"order": [
+			"83921ac7-dd15-41dc-8f23-ce059d02b05f",
+			"268ba46e-9572-459b-8a97-62514b89efca",
+			"5f0f3d9c-6259-4d4a-9cd8-c8157701fb43",
+			"4abe57b6-3fee-48cd-ab19-1a73c0f60773",
+			"fc00506c-e3a1-4e79-847d-20d58ff3be3b",
+			"bd22fc1e-d659-47cf-9658-e1d7ada437f0",
+			"57dc8f10-0105-461d-a9d1-88a767ad4e58",
+			"7d9b2ee6-6546-428e-8e55-6e0c22ea6157",
+			"f9704c0f-73a7-4238-82c3-ee42cdd2b233",
+			"d52f6b98-adcc-42c7-a2ee-267391c32d0c"
+		],
+		"folders_order": [],
+		"owner": "7102133",
+		"favorite": false,
+		"isFavorite": true,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "teste1",
+			"value": "",
+			"enabled": false
+		},
+		{
+			"key": "teste2",
+			"value": "",
+			"enabled": false
+		}
+	],
+	"results": [
+		{
+			"name": "TaskAutentSucesso",
+			"id": "83921ac7-dd15-41dc-8f23-ce059d02b05f",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAJycnL3geNrfnJDCje9qZAKKEZARr9TSnA5L6QQlSZCV5ZCZALLWAhIX0xpeiaKBG7yllwvt8PTcpnqY1dBdxDDN7GFeG8gyaVkpxPZC1UfVbZAtKV42DmjCyhWRR5EQI3DkgeN0E3ZBPYUwDSCXpsgZD",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"conected": true
+			},
+			"testPassFailCounts": {
+				"conected": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"488"
+			],
+			"allTests": [
+				{
+					"conected": true
+				}
+			],
+			"time": "488",
+			"totalRequestTime": "488",
+			"iterationResults": {}
+		},
+		{
+			"name": "ObterResp",
+			"id": "268ba46e-9572-459b-8a97-62514b89efca",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAC7xa538smHW2pS5yZBx7yP9c4CCjqhbNaVTWamGPWHqfBf0ZCIxwA6lwmqQmxqlZCfqQW81M2FHnuwU0ZAO7ZBySMDG7MNYQhj4ZCelJ1ZBfzGejQv9ZCi9GwrCVSsYVq8aYwr2zCE3xXPDusKWuLCRcHeeddR03sIvjxZB1Uraq22UWwozKOHakRgpgR15qsAZDZD",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"263"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "263",
+			"totalRequestTime": "263",
+			"iterationResults": {}
+		},
+		{
+			"name": "PostMessage",
+			"id": "5f0f3d9c-6259-4d4a-9cd8-c8157701fb43",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite!",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"995"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "995",
+			"totalRequestTime": "995",
+			"iterationResults": {}
+		},
+		{
+			"name": "UpdateMessage",
+			"id": "4abe57b6-3fee-48cd-ab19-1a73c0f60773",
+			"url": "https://graph.facebook.com/682013141848989_2328214947228792?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Amigos !",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"247"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			],
+			"time": "247",
+			"totalRequestTime": "247",
+			"iterationResults": {}
+		},
+		{
+			"name": "PostInvalidParameter",
+			"id": "fc00506c-e3a1-4e79-847d-20d58ff3be3b",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&field=message",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"508"
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			],
+			"time": "508",
+			"totalRequestTime": "508",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteMessage",
+			"id": "bd22fc1e-d659-47cf-9658-e1d7ada437f0",
+			"url": "https://graph.facebook.com/682013141848989_2328262370557383?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Pessoal!",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"434"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "434",
+			"totalRequestTime": "434",
+			"iterationResults": {}
+		},
+		{
+			"name": "Task Error 201",
+			"id": "57dc8f10-0105-461d-a9d1-88a767ad4e58",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Location is present": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Location is present": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"260"
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Location is present": false
+				}
+			],
+			"time": "260",
+			"totalRequestTime": "260",
+			"iterationResults": {}
+		},
+		{
+			"name": "TaskError200",
+			"id": "7d9b2ee6-6546-428e-8e55-6e0c22ea6157",
+			"url": "https://graph.facebook.com/me?client_id=1089985071208171&client_secret=5e4dcad6bb3716df4f3acaaa4908f81d&fields=id,name",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"244"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Body is correct": true
+				}
+			],
+			"time": "244",
+			"totalRequestTime": "244",
+			"iterationResults": {}
+		},
+		{
+			"name": "TaskError404",
+			"id": "f9704c0f-73a7-4238-82c3-ee42cdd2b233",
+			"url": "https://graph.facebook.com/123?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"253"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "253",
+			"totalRequestTime": "253",
+			"iterationResults": {}
+		},
+		{
+			"name": "TaskError204",
+			"id": "d52f6b98-adcc-42c7-a2ee-267391c32d0c",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAFmW7HiFYBWJLNeIKsWseKQcdL2KNrJBTo8JEjMMJWItDCBi5ZCjZCQ99J3Pc60V8AKHFlVj8jRDZBRDBGq07nuOZAFXUconQiSGT2rMmBwOFovXExA6ZAMq6FhynYVBU5KfSoMRgiEScywWfbJ2dkibjw2wQiXvDql9ehiAj0en2XZAZAYCCogog8bnIkhzgZDZD",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"conected": false
+			},
+			"testPassFailCounts": {
+				"conected": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"214"
+			],
+			"allTests": [
+				{
+					"conected": false
+				}
+			],
+			"time": "214",
+			"totalRequestTime": "214",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 4,
+	"totalFail": 5,
+	"totalTime": 3906,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "TaskAutentSucesso",
+			"id": "83921ac7-dd15-41dc-8f23-ce059d02b05f",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAJycnL3geNrfnJDCje9qZAKKEZARr9TSnA5L6QQlSZCV5ZCZALLWAhIX0xpeiaKBG7yllwvt8PTcpnqY1dBdxDDN7GFeG8gyaVkpxPZC1UfVbZAtKV42DmjCyhWRR5EQI3DkgeN0E3ZBPYUwDSCXpsgZD",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"conected": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "ObterResp",
+			"id": "268ba46e-9572-459b-8a97-62514b89efca",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAC7xa538smHW2pS5yZBx7yP9c4CCjqhbNaVTWamGPWHqfBf0ZCIxwA6lwmqQmxqlZCfqQW81M2FHnuwU0ZAO7ZBySMDG7MNYQhj4ZCelJ1ZBfzGejQv9ZCi9GwrCVSsYVq8aYwr2zCE3xXPDusKWuLCRcHeeddR03sIvjxZB1Uraq22UWwozKOHakRgpgR15qsAZDZD",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "PostMessage",
+			"id": "5f0f3d9c-6259-4d4a-9cd8-c8157701fb43",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite!",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "UpdateMessage",
+			"id": "4abe57b6-3fee-48cd-ab19-1a73c0f60773",
+			"url": "https://graph.facebook.com/682013141848989_2328214947228792?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Amigos !",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "PostInvalidParameter",
+			"id": "fc00506c-e3a1-4e79-847d-20d58ff3be3b",
+			"url": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&field=message",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteMessage",
+			"id": "bd22fc1e-d659-47cf-9658-e1d7ada437f0",
+			"url": "https://graph.facebook.com/682013141848989_2328262370557383?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Pessoal!",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Task Error 201",
+			"id": "57dc8f10-0105-461d-a9d1-88a767ad4e58",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Location is present": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "TaskError200",
+			"id": "7d9b2ee6-6546-428e-8e55-6e0c22ea6157",
+			"url": "https://graph.facebook.com/me?client_id=1089985071208171&client_secret=5e4dcad6bb3716df4f3acaaa4908f81d&fields=id,name",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TaskError404",
+			"id": "f9704c0f-73a7-4238-82c3-ee42cdd2b233",
+			"url": "https://graph.facebook.com/123?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "TaskError204",
+			"id": "d52f6b98-adcc-42c7-a2ee-267391c32d0c",
+			"url": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAFmW7HiFYBWJLNeIKsWseKQcdL2KNrJBTo8JEjMMJWItDCBi5ZCjZCQ99J3Pc60V8AKHFlVj8jRDZBRDBGq07nuOZAFXUconQiSGT2rMmBwOFovXExA6ZAMq6FhynYVBU5KfSoMRgiEScywWfbJ2dkibjw2wQiXvDql9ehiAj0en2XZAZAYCCogog8bnIkhzgZDZD",
+			"time": "2019-05-03T03:25:20.249Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"conected": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		}
+	],
+	"synced": false
+}
