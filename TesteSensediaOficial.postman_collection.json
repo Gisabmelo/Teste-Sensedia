@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "e61d8e3e-5056-4a46-8d54-1e1d51d4636b",
+		"name": "TesteSensediaOficial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TaskAutentSucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f81ad38f-f994-4973-91f4-4362162bf423",
+						"exec": [
+							"tests[\"conected\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "FB.getLoginStatus(function(response) {\r\n  if (response.status === 'connected') {\r\n    var accessToken = response.authResponse.accessToken;\r\n  } \r\n} );"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAJycnL3geNrfnJDCje9qZAKKEZARr9TSnA5L6QQlSZCV5ZCZALLWAhIX0xpeiaKBG7yllwvt8PTcpnqY1dBdxDDN7GFeG8gyaVkpxPZC1UfVbZAtKV42DmjCyhWRR5EQI3DkgeN0E3ZBPYUwDSCXpsgZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAJycnL3geNrfnJDCje9qZAKKEZARr9TSnA5L6QQlSZCV5ZCZALLWAhIX0xpeiaKBG7yllwvt8PTcpnqY1dBdxDDN7GFeG8gyaVkpxPZC1UfVbZAtKV42DmjCyhWRR5EQI3DkgeN0E3ZBPYUwDSCXpsgZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObterResp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6100a76-4166-4b24-964b-b098820459cd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAC7xa538smHW2pS5yZBx7yP9c4CCjqhbNaVTWamGPWHqfBf0ZCIxwA6lwmqQmxqlZCfqQW81M2FHnuwU0ZAO7ZBySMDG7MNYQhj4ZCelJ1ZBfzGejQv9ZCi9GwrCVSsYVq8aYwr2zCE3xXPDusKWuLCRcHeeddR03sIvjxZB1Uraq22UWwozKOHakRgpgR15qsAZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAC7xa538smHW2pS5yZBx7yP9c4CCjqhbNaVTWamGPWHqfBf0ZCIxwA6lwmqQmxqlZCfqQW81M2FHnuwU0ZAO7ZBySMDG7MNYQhj4ZCelJ1ZBfzGejQv9ZCi9GwrCVSsYVq8aYwr2zCE3xXPDusKWuLCRcHeeddR03sIvjxZB1Uraq22UWwozKOHakRgpgR15qsAZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMessage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b035da92-7d49-4418-8404-89cef1111be4",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite!",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl"
+						},
+						{
+							"key": "message",
+							"value": "Boa Noite!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMessage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "810d6236-64b9-41f0-81e2-0a2696cd02d9",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/682013141848989_2328214947228792?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Amigos !",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"682013141848989_2328214947228792"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl"
+						},
+						{
+							"key": "message",
+							"value": "Boa Noite Amigos !"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostInvalidParameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b035da92-7d49-4418-8404-89cef1111be4",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () { pm.response.to.have.status(400); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me/feed?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&field=message",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl"
+						},
+						{
+							"key": "field",
+							"value": "message"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMessage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "21edd3b2-634c-4db2-bacb-d606558f7c3b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"DELETE\"\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/682013141848989_2328262370557383?access_token=EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl&message=Boa Noite Pessoal!",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"682013141848989_2328262370557383"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAMT6RqWAYN9pEBO19FdBcZAeONgt1a9BTKSBNgZCB9qzRVwCjsZB2kmaXtZBWSg6PH3urBv9RWgebgqwsfiZBhFXKLPqLlrf8vZCtHHNBUbM7GFnLRYZC6Oo2YwXOT2aZAhFOMOOZCywsmM2ZAkAHUHAZBeArTtU4UBOAwGhUdm4NKl"
+						},
+						{
+							"key": "message",
+							"value": "Boa Noite Pessoal!"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"method\": \"DELETE\"\n}"
+						},
+						"url": {
+							"raw": "https://postman-echo.com/delete",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Oct 2018 13:18:26 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"222-EaECC84U8vKhL8mPSvAGY65VBbc\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "set-cookie",
+							"value": "sails.sid=s%3AcoeBrm0wyZAGMQpoxU7JX2keD4frWnPC.KqL1VbDNV8BVsT4ru1qfXLpbuloRyzdCwDKlWRbzUIA; Path=/; HttpOnly"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Length",
+							"value": "383"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"DELETE\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"23\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3ApG9SWO0OWeJMy_NIh2B_S4miHdP4l8x7.MaILgH0cG%2Fn9vprO60ke%2FopJhgNjqdUzdB0azeSEi38\",\n        \"postman-token\": \"06f28999-e374-474d-a830-506b1afe64e2\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"DELETE\"\n    },\n    \"url\": \"https://postman-echo.com/delete\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Task Error 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f81ad38f-f994-4973-91f4-4362162bf423",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"tests[\"Location is present\"] = postman.getResponseHeader(\"location\");",
+							"postman.setEnvironmentVariable(\"getIdMsg\", postman.getResponseHeader(\"location\"));",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35a9faa9-f9c1-4288-a1aa-ac54a1d6457a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Task Error 200\",\n  \"completed\": false\n  \n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskError200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f81ad38f-f994-4973-91f4-4362162bf423",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Body is correct\"] = responseBody =! \"\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me?client_id=1089985071208171&client_secret=5e4dcad6bb3716df4f3acaaa4908f81d&fields=id,name",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1089985071208171"
+						},
+						{
+							"key": "client_secret",
+							"value": "5e4dcad6bb3716df4f3acaaa4908f81d"
+						},
+						{
+							"key": "fields",
+							"value": "id,name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskError404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f81ad38f-f994-4973-91f4-4362162bf423",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/123?access_token=EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"123"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAES2qjBdpwne24ZBfe9A50uXSZBVP6mzASPAXaLZC1D5pZC7AceqGKk5s4xX8rqRcwyOLjHeo0esO8VJL9OxTnFWx3N46hmnO5asrX3ZAZBOA4VyCP00oNXYwl2JvTsrRt6BluQBYYLsp3MgzNwKJJQitGE4p29o6falKZApYvOnWdggEvEVeN63ZAOzeZBh8EQZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskError204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f81ad38f-f994-4973-91f4-4362162bf423",
+						"exec": [
+							"tests[\"conected\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "FB.getLoginStatus(function(response) {\r\n  if (response.status === 'connected') {\r\n    var accessToken = response.authResponse.accessToken;\r\n  } \r\n} );"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/me?access_token=EAAPfVez61usBAFmW7HiFYBWJLNeIKsWseKQcdL2KNrJBTo8JEjMMJWItDCBi5ZCjZCQ99J3Pc60V8AKHFlVj8jRDZBRDBGq07nuOZAFXUconQiSGT2rMmBwOFovXExA6ZAMq6FhynYVBU5KfSoMRgiEScywWfbJ2dkibjw2wQiXvDql9ehiAj0en2XZAZAYCCogog8bnIkhzgZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAPfVez61usBAFmW7HiFYBWJLNeIKsWseKQcdL2KNrJBTo8JEjMMJWItDCBi5ZCjZCQ99J3Pc60V8AKHFlVj8jRDZBRDBGq07nuOZAFXUconQiSGT2rMmBwOFovXExA6ZAMq6FhynYVBU5KfSoMRgiEScywWfbJ2dkibjw2wQiXvDql9ehiAj0en2XZAZAYCCogog8bnIkhzgZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0051f7ad-92c2-434e-a4d9-f18a072db826",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "aa10545e-ad47-4dc0-9b79-02130850a930",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
