@@ -1,0 +1,39 @@
+Problemas apresentados:
+
+Impossibilidade de postar no feed do usuário devido a falta de permissão a  função manage_pages : Requer App Review que pode demorar de  2-3 dias  ou mais de uma semana de análise. Tempo esse que seria inviável até a entrega do teste.
+
+Conforme descrito no doc :https://developers.facebook.com/docs/facebook-login/permissions#reference-manage_pages
+
+Ao tentar postar uma mensagem no feed do usuário usuando o access_token user, é exibido a seguinte mensagem:
+
+{
+  "error": {
+    "message": "(#200) If posting to a group, requires app being installed in the group, and \
+          either publish_to_groups permission with user token, or both manage_pages \
+          and publish_pages permission with page token; If posting to a page, \
+          requires both manage_pages and publish_pages as an admin with \
+          sufficient administrative permission",
+    "type": "OAuthException",
+    "code": 200,
+    "fbtrace_id": "BHQpyAPccBz"
+  }
+
+Para contornar esse problema e validar um caminho parecido, optei por postar no feed de  em uma página que o usuário administra. Para isso, não foi necessário permissões especiais.Usei apenas o “Page Access Token”( via Graph API Explorer), para gerar um token com permissão para esse fim. 
+
+O único problema apresentado durante os testes automáticos, foi que, durante a atualização da mensagem, o teste falhou, pois o id da mensagem atualizada não fora mudado no header. Um problema que ficou pendente de resolução. Nos testes, manuais, estava ok.
+
+*Exemplo (print)/video
+
+Considerações e suposições:
+
+Como acredito que o foco do teste era validar as requisições pela API do Facebook, não cheguei a criar um site/app (front-end) próprio com login do Facebook, pois isso tomaria mais tempo que o disponível. Apenas criei um App no https://developers.facebook.com , para gerar as chaves e os tokens que seriam necessários para realizar os testes. Como ferramenta,utilizei o Postman para validá-las e realizar a execução dos cenários, e utilizei  o https://graph.facebook.com/ para realizar as chamadas.
+
+Ainda sobre a validade do Token, apesar de na página Access Token Debugger apresentar a validade de aproximadamente 2 -3 meses, o token expirava a cada 1 hs ou 1 dia, tendo que ser gerado novamente várias vezes durante os testes. Tentei a opção de estender a sua validade, mas foi em vão.Talvez via código, seja possível fazer que essa validade seja maior.
+
+Para garantir a veracidade dos testes, gravei uns vídeos dos cenários, caso não seja possível reproduzi-los.
+
+Obrigada,
+Gislaine Melo.
+
+
+ 
